@@ -10,7 +10,7 @@ import (
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
-
+	w.WriteHeader(http.StatusOK)
 	hostname, err := os.Hostname()
 	if err != nil {
 		log.Fatal(err)
