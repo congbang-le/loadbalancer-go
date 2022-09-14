@@ -14,3 +14,17 @@ type Server interface {
 	// Serve uses this server to process the request
 	Serve(rw http.ResponseWriter, req *http.Request)
 }
+
+type LoadBalancer struct {
+	port            string
+	roundRobinCount int
+	servers         []Server
+}
+
+func NewLoadBalancer(port string, servers []Server) *LoadBalancer {
+	return &LoadBalancer{
+		port:            port,
+		roundRobinCount: 0,
+		servers:         servers,
+	}
+}
