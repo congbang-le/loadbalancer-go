@@ -91,9 +91,9 @@ func (lb *LoadBalancer) serveProxy(rw http.ResponseWriter, req *http.Request) {
 
 func main() {
 	servers := []Server{
-		newSimpleServer("simple-server-0:8080"),
-		newSimpleServer("simple-server-1:8080"),
-		newSimpleServer("simple-server-2:8080"),
+		newSimpleServer("http://simple-server-0:8080/hello"),
+		newSimpleServer("http://simple-server-1:8080/hello"),
+		newSimpleServer("http://simple-server-2:8080/hello"),
 	}
 
 	lb := NewLoadBalancer("8000", servers)
