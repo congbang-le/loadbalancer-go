@@ -1,13 +1,6 @@
 # loadbalancer-go
+This project demonstrates how a load balancer work under the hood basically using Goland and Docker. So that you can know how to troubleshoot it when there are issue with load balancing service on the cloud platform like AWS, Azure or GCP.
+P/s: Credit goes to @swayne275 because I use his [load balancer code](https://github.com/swayne275/load-balancer-proxy).
 
-## Todo
-- [X] Simple web server
-    - [X]  Main logic [here](https://blog.logrocket.com/creating-a-web-server-with-golang/)
-    - [X]  Test [here](https://ieftimov.com/posts/testing-in-go-testing-http-servers/)
-    - [X]  Dockerfile
-- [ ]  Load balancer type
-    - [ ]  Main logic
-    - [ ]  Test with request to gg, fb
-- [ ]  Combine Simple web server and load balancer
-- [ ]  Terraform to create infra, maybe docker
-- [ ] Update README
+## Overview
+

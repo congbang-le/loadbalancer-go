@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  simple-webserver-0:
+    image: simple-webserver:v1.0.0
+    build:
+      context: simple-webserver
+  simple-webserver-1:
+    image: simple-webserver:v1.0.0
+    build:
+      context: simple-webserver
+  simple-webserver-2:
+    image: simple-webserver:v1.0.0
+    build:
+      context: simple-webserver
+  loadbalancer:
+    image: loadbalancer:v1.0.0
+    build: 
+      context: loadbalancer
+    ports: 
+      - 8000:8000
+    depends_on:
+      - simple-webserver-0
+      - simple-webserver-1
+      - simple-webserver-2
+  
