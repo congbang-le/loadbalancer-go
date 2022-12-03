@@ -3,7 +3,9 @@ This project demonstrates how a load balancer work under the hood basically usin
 P/s: Credit goes to @swayne275 because I use his [load balancer code](https://github.com/swayne275/load-balancer-proxy).
 
 ## Overview
+
 ![Diagram](./docs/loadbalancer.drawio.png)
+
 Structure of this project:
 - [simple-webserver](./simple-webserver/): store simple-webserver code and Dockerfile to build image.
 - [loadbalancer](./loadbalancer/): loadbalancer code from @swayne275.
